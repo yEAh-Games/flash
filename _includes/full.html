@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-{% include gtag.html %}
-
 <title>Full-screen player | YGP</title>
-<link rel="shortcut icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.png" type="image/x-icon"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://arcade.yeahgames.net/assets/ruffle/ruffle.js"></script>
 <style>
     body {
@@ -11,16 +7,18 @@
         overflow: hidden;
     }
 </style>
+
+<object type="application/x-shockwave-flash" data="./game.swf" width="100%" height="100%">
+    <param name="movie" value="./game.swf"/>
+    <param name="quality" value="high"/>
+    <param name="bgcolor" value="#000000"/>
+    <param name="allowfullscreen" value="true"/>
+</object>
+
 <div style="position: absolute; top: 0; right: 0; z-index: 9999;">
-    <a href="https://arcade.yeahgames.net/games/{{page.url|remove:'published'|remove:'play'|remove:'flash.g.arcade.yeahgames.net/published/'|remove:'/full.html'|remove:'full'|remove:'/'}}/play/details" style="display: block; width: 32px; height: 32px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
+    <a href="https://arcade.yeahgames.net/games/{{page.url | remove: 'full' | remove: '.html' | remove: '/' | remove: 'published'}}/play/details" style="display: block; width: 32px; height: 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24">
             <path fill="#ffffff" d="M19.78 17.78L12 10l7.78-7.78a1.5 1.5 0 1 0-2.12-2.12L9.88 7.88 2.1.1A1.5 1.5 0 0 0 .69 1.5l7.78 7.78L.69 17.06a1.5 1.5 0 0 0 2.12 2.12l7.78-7.78 7.78 7.78a1.5 1.5 0 0 0 2.12-2.12z"/>
         </svg>
     </a>
 </div>
-<object type="application/x-shockwave-flash" data="./game.swf" width="100%" height="100%">
-    <param name="movie" value="./game.swf" />
-    <param name="quality" value="high" />
-    <param name="bgcolor" value="#000000" />
-    <param name="allowfullscreen" value="true" />
-</object>
